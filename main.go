@@ -26,9 +26,9 @@ func printCommandEvents(analyticsChannel <-chan *slacker.CommandEvent) {
 
 func main() {
 	//set environment variable
-	os.Setenv("SLACK_BOT_TOKEN", "xoxb-316496250898-3323795439380-rQe4D990PtHM1kTVSWh9LF65")
+	os.Setenv("SLACK_BOT_TOKEN", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
-	os.Setenv("SLACK_APP_TOKEN", "xapp-1-A039HNC78BW-3334037830961-c0483d44d6ed3a8f8097ddb1082ca3025b7b4e11c682225e057386c81c5bc156")
+	os.Setenv("SLACK_APP_TOKEN", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
 	bot := slacker.NewClient(os.Getenv("SLACK_BOT_TOKEN"), os.Getenv("SLACK_APP_TOKEN"))
 
@@ -50,7 +50,7 @@ func main() {
 			currentYear := currentTime.Year()
 			age := currentYear - yob
 
-			r := fmt.Sprintf("age is %d", age)
+			r := fmt.Sprintf("thine age is %d 😎", age)
 
 			response.Reply(r)
 		},
